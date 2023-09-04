@@ -1,0 +1,204 @@
+<!-- 문서 최상단에 doc type을 명시하여 브라우저에게 알려줌 -->
+<!DOCTYPE html>
+
+<!-- 해당 문서의 주언어 -->
+<html lang="ko">
+  <head>
+    <!-- 문서의 인코딩이 유니코드라서 -->
+    <meta charset="UTF-8" />
+
+    <!-- 모바일브라우저 화면크기 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 탭 제목 -->
+    <title>HTML</title>
+  </head>
+  <body>
+    <!-- id와 클래스 속성으로 요소에 이름을 부여하여 css작성 -->
+    <div id="wrap">
+      <header id="header">
+        <h1>로고등의 큰제목</h1>
+        <h2>섹션 제목</h2>
+        <h3>컬럼 제목</h3>
+
+        <!-- 헤더의 주메뉴에 한번만 사용 -->
+        <nav>
+          <ul>
+            <li>회사소개</li>
+            <li>이용방법</li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- header, footer를 제외한 메인내용 -->
+      <main id="container">
+        <ul>
+          <!-- entity code -->
+          &lt;ul&gt; 제목
+          <li>순서가 의미없는 리스트</li>
+          <li>순서가 의미없는 리스트</li>
+          <li>순서가 의미없는 리스트</li>
+        </ul>
+
+        <ol>
+          &lt;ol&gt; 제목
+          <li>페이스북에 접속한다</li>
+          <li>이미지를 업로드</li>
+          <li>참여 댓글을 작성</li>
+        </ol>
+
+        <!-- dl: 제목이 포함된 리스트 -->
+        <!-- dt, dd가 하나 이상 포함되어야 함 -->
+        <dl>
+          <dt>주소:</dt>
+          <dd>서울시 서대문구</dd>
+          <dt>전화번호:</dt>
+          <dd>02-111-222</dd>
+        </dl>
+
+        <!-- class: tag 이름 -->
+        <section class="main_news">
+          <!-- section tag: 제목이 반드시 하나 이상 있어야함 -->
+          <h2>뉴스</h2>
+        </section>
+
+        <!-- 모바일 메뉴증 화면 밖이나 좌우측에 있는 내용 -->
+        <aside class="quick">퀵메뉴</aside>
+
+        <!-- # : 현재 페이지 -->
+        <a href="#">Null Link</a>
+        <a href="sub.html">Sub Page</a>
+        <h2><a href="index.html">Home</a></h2>
+
+        <!-- 외부링크: 다른 사이트 링크걸기 -->
+        <a href="https://www.naver.com" title="새창열림">Naver</a>
+      </main>
+
+      <footer id="footer">
+        <!-- address: 주소만 감쌀때 사용 -->
+        <address>서울시 서대문구</address>
+      </footer>
+
+      <!-- ---------------- -->
+      <!-- Ctrl + / : comment -->
+      <!-- <div></div> : 의미없이 여러요소를 그릅화 할 때 -->
+
+      <!-- <p></p>: 문단 감싸는 것 -->
+      <p>
+        <!-- <br />: 줄바꿈이며 empty element, 닫는태그 없음 -->
+        This is p.<br />
+
+        <!-- <b></b>, <i></i>, <u></u> 태그는 예전에 사용했다가 xhtml에서 사라졌음. html5에서 다시 나옴 -->
+        You can use b tag for <b>Bold</b>
+      </p>
+
+      <!-- <hr />: 강조 선 -->
+      <hr />
+      <br />
+
+      <!-- <em></em>: 강조(italic) -->
+      <!-- <strong></strong>: 강조(bold) -->
+      <!-- <span></span>: 문장 감싸는 것 -->
+      <!-- 일반적으로 사용하지 않는다. 원칙적으로 css로 표현 -->
+
+      <!-- &nbsp; : 공백문자; 약관동의, 요금표 같은 특정 상황에서만 사용 나머지는 CSS 사용 -->
+      <p>
+        <!-- 태그기호 or url에 포함되는 기호이므로 오류 방지를 위해 사용 -->
+        &lt;배고파&gt; &amp; &lt;배고파&gt;
+        <br />
+        &Lt;배고파&Gt;
+        <br />
+        &LT;배고파&GT;
+      </p>
+
+      <div>
+        <a href="https://developer.mozilla.org/en-US/"
+          >MDN Link <span>a : hyper link</span></a
+        >
+      </div>
+
+      <div>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          >MDN HTML Element</a
+        >
+      </div>
+
+      <!-- 상대경로: 현재파일을 기준으로 연결할 파일의 위치를 나타내는 방식 -->
+      <!-- ./ : 현재폴더이며 생략가능 -->
+      <!-- alt는 이미지에 대한 설명을 넣어줌(웹접근성) -->
+      <h1><img src="./images/kolon-logo.svg" alt="KOLON logo" /></h1>
+
+      <!-- 절대경로: 외부서버에 있는 이미지 연결할 경우 -->
+      <img src="https://www.dbcut.com/img/logo.png" alt="DBCUT logo" />
+
+      <!-- 서버경로 -->
+      <img src="/test/src/test_image.jpg" alt="test image" />
+
+      <h2>List</h2>
+      <ul>
+        <li>ul : Unordered List</li>
+        <li>li : List contents</li>
+        <li>
+          <ol>
+            <li>This is ordered List in li tag</li>
+            <li>Test1</li>
+            <li>Test2</li>
+          </ol>
+        </li>
+        <ol>
+          <li>This is ol without li</li>
+          <li>Test1</li>
+          <li>Test2</li>
+        </ol>
+      </ul>
+      <hr />
+      <br />
+
+      <h2>Image</h2>
+      <div>
+        <img
+          src="imges/stevie_chicks.jpg"
+          alt="My pet chicken, Stevie Chicks"
+        />
+        <p>img tag has src for address, alt for words</p>
+      </div>
+      <hr />
+      <br />
+
+      <h2>Entity Code</h2>
+      <a href="https://html.spec.whatwg.org/multipage/named-characters.html"
+        >html entity code</a
+      >
+      <p>entity code start with '&', finished with ';' &spades;</p>
+      <hr />
+      <br />
+
+      <h2>Form</h2>
+      <form action="/form.html">Here is the form. You need an action.</form>
+      <hr />
+      <br />
+
+      <h2>Input</h2>
+      <div><input type="text" placeholder="This is a placeholder" /></div>
+      <div><input type="password" placeholder="password" /></div>
+      <div><input type="number" , placeholder="number" /></div>
+      <div><input type="color" /></div>
+      <hr />
+      <br />
+
+      <h2>Label</h2>
+      <p>
+        <label for="id"
+          >This is label with for="id" Now you can link between label and
+          input</label
+        >
+        <input type="text" placeholder="username" id="id" />
+      </p>
+      <hr />
+      <br />
+
+      <h2>sup/sub tag</h2>
+      <p><sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1</p>
+    </div>
+  </body>
+</html>
