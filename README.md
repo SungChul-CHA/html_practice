@@ -41,7 +41,7 @@
     `<img src="/images/common/logo.png" alt="tft">`
     </br>
 
-  - 절대경로: 외부서버의 도메인주소를 모두 입력하는 방식
+  - 절대경로: 외부서버의 도메인주소를 모두 입력하는 방식 </br>
     `<img src="http://ossamuiux.com/images/logo.png" alt="">`
 
 ## 유용한 크롬 익스텐션
