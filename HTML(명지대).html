@@ -7,24 +7,61 @@
     <!-- 문서의 인코딩이 유니코드라서 -->
     <meta charset="UTF-8" />
 
-    <!-- 모바일브라우저 화면크기 -->
+    <!-- 모바일 브라우저의 크기 설정 : #wrap의 min-width만큼 지정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 탭 제목 -->
     <title>HTML</title>
+
+    <!-- 웹 폰트는 최대한 적을 수록 좋다 - 다운로드 속도 때문에 -->
+    <!-- 폰트 사이즈는 보통 17~16px -->
+    <!-- TTF/OTF, WOFF 세개만 사용 -->
+    <!-- 사이트 폰트 찾을때 dev모드에서 Ctrl+shift+f로 찾아서 디렉토리 구조 잘 찾기 -->
+    <!-- 다운로드는 주소창으로 -->
+    <!-- 웹폰트 가져오는거 3가지 있는데 위의 2개는 최신버전이라 이슈가 많아서 밑에거 주로 씀 -->
+    <!-- 위에 2개가 웹폰트 로딩을 좀더 빠르게 해줌 -->
+    <!-- 스타일 적용 전에 웹폰트연결을 먼저해야함 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* 솔루션(특수한) 환경에서 솔루션에 의해 적용된 스타일을 바꿀 경우에 사용 */
+      .logo {
+        border: 2px solid black;
+      }
+    </style>
   </head>
   <body>
     <!-- id와 클래스 속성으로 요소에 이름을 부여하여 css작성 -->
     <div id="wrap">
-      <header id="header">
-        <h1>로고등의 큰제목</h1>
+      <!-- 인라인스타일: tag에 직접 | 요소에 자바스크립트가 적용되면 크롬 개발자도구에 이렇게 나옴 -->
+      <header id="header" style="border: 5px solid red; height: 80px">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="./images/kolon-logo.svg" alt="kolon logo" />
+          </a>
+          로고등의 큰제목
+        </h1>
         <h2>섹션 제목</h2>
         <h3>컬럼 제목</h3>
 
         <!-- 헤더의 주메뉴에 한번만 사용 -->
         <nav>
           <ul>
-            <li>회사소개</li>
+            <li>
+              <a href="#">
+                <!-- 리스트가 다른 내용이면 제목, 같은 내용이면 strong -->
+                <h3>회사소개</h3>
+                <p>
+                  삶의 희노애락을 함께하는<br />
+                  토털 라이프케어 서비스 기업
+                </p>
+              </a>
+            </li>
             <li>이용방법</li>
           </ul>
         </nav>
@@ -133,6 +170,10 @@
 
       <!-- 서버경로 -->
       <img src="/test/src/test_image.jpg" alt="test image" />
+
+      <!-- 클래스명에 띄워쓰기 하면 두 개 주는거 -->
+      <div class="test box01">상자1</div>
+      <div class="test box02">상자2</div>
 
       <h2>List</h2>
       <ul>
