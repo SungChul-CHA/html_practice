@@ -19,7 +19,11 @@
 - 최소한의 접근성(장애인도 웹사이트의 정보를 인지할 수 있도록)을 지켜 마크업
 - 관공서는 접근성인증마크를 취득해야함(장애인 차별 금지법)
 
-#### 3. [entity code](https://tools.w3cub.com/html-entities)
+#### 3. Entity Code Links
+
+- [W3cub entity code](https://tools.w3cub.com/html-entities)
+- [entitycode](https://entitycode.com/)
+- [toptal](https://www.toptal.com/designers/htmlarrows/)
 
 #### 4. 파일 연결 경로
 
