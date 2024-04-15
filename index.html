@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <h1 class="head">header : 웹 페이지 헤더</h1>
+                <nav>nav : 네비게이션 영역</nav>
+            </header>
+            <main id="container">
+                <h2>main : 전체에서 가장 핵심되는 내용</h2>
+                <div>
+                    div : 블록 요소와 인라인 요소를 그룹으로 묶을 때 사용
+                    <blockquote
+                        cite="https://www.brainyquote.com/quotes/quotes/a/alberteins161840.html"
+                    >
+                        <p>
+                            blockquote : 문단 단위의 긴 텍스트를 가진 인용문을
+                            작성할 대 사용. 들여쓰기를 해서 출력 출처가 확실한
+                            인용문은 cite 속성으로 출처 경로를 명시
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        앞 내용
+                        <q
+                            cite="https://www.brainyquote.com/quotes/quotes/a/alberteins161840.html"
+                        >
+                            q: 문단 내에 텍스트 단위의 짧은 인용문을 작성할 때
+                            사용. 큰 따옴표로 묶여서 출력</q
+                        >
+                        뒤 내용
+                    </p>
+                </div>
+
+                <p>
+                    <span
+                        >span : 인라인 요소를 그룹으로 묶을 때 사용<br />
+                        <del> del : 삭제할 텍스트를 표시할 때 사용</del><br />
+                        <ins> ins : 추가할 텍스트를 표시할 때 사용</ins><br />
+                        <strong> strong : 텍스트의 의미를 강조하는 태그</strong
+                        ><br />
+                        <em> em : 텍스트의 강조를 나타내는 태그</em>
+                    </span>
+                </p>
+
+                <p>
+                    H<sub>2</sub>O is the chemical formula for water. CO<sup
+                        >2</sup
+                    >
+                    is
+                </p>
+
+                <dl>
+                    dl : 용어와 용어 설명을 나열한 정의형 목록 생성
+                    <dt>용어는 dt 태그</dt>
+                    <dd>용어 설명은 dd 태그</dd>
+                </dl>
+
+                <a href="#" target="_blank" title="title"
+                    >target 속성 : 링크에 연결된 페이지가 출력될 창.
+                    &ndash;blank : 새로운 창</a
+                >
+
+                <form action="#" method="dialog">
+                    <dl>
+                        <dt>action</dt>
+                        <dd>전송할 서버의 URL 주소</dd>
+                        <dt>method</dt>
+                        <dd>전송 방식</dd>
+                        <dt>get</dt>
+                        <dd>
+                            URL 주소 표시줄에 사용자 입력 값이 노출. 보안 유지가
+                            필요
+                        </dd>
+                        <dt>post</dt>
+                        <dd>
+                            URL 주소 표시줄에 사용자 입력 값이 노출되지 않음.
+                            보안 유지가 필요
+                        </dd>
+                    </dl>
+                    <div>
+                        <label for="name"
+                            >text <input type="text" name="name" id="name"
+                        /></label>
+                        <br />
+                        <label for="textarea"
+                            >textarea, readonly
+                            <textarea
+                                name="textarea"
+                                id="textarea"
+                                cols="25"
+                                rows="3"
+                            >
+textarea 안에 글 적으면</textarea
+                            >
+                        </label>
+                    </div>
+                    <p>
+                        <label for="email">
+                            for는 id와 같아야함. name은 입력 값이 서버로 전송될
+                            때 name 이름으로 값을 전달
+                            <input type="email" name="email" id="email" />
+                        </label>
+                    </p>
+                    <div>
+                        <label for="url">
+                            url input
+                            <input
+                                type="url"
+                                name="url"
+                                id="url"
+                                placeholder="placeholder에 주면"
+                        /></label>
+
+                        <label for="tel">
+                            tel autofocus
+                            <input type="tel" name="tel" id="tel" autofocus
+                        /></label>
+                        <label for="search"
+                            >search input
+                            <input type="search" name="search" id="search"
+                        /></label>
+                        <br />
+                        <label for="password"
+                            >password required
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                required
+                        /></label>
+                        <input type="submit" value="전송" />
+                    </div>
+                </form>
+                <form action="#">
+                    <fieldset>
+                        <legend>
+                            legend : 그룹으로 묶은 fieldset 영역에 이름을 붙일
+                            때 사용
+                        </legend>
+                        fieldset : 관련 있는 폼 요소끼리 그룹을 지을 때 사용
+                        <br />
+                        <label for="radio"
+                            >radio <input type="radio" name="radio" id="radio"
+                        /></label>
+                        <label for="checkbox"
+                            >checkbox checked
+                            <input
+                                type="checkbox"
+                                name="checkbox"
+                                id="checkbox"
+                                checked
+                        /></label>
+                        <label for="date"
+                            >date <input type="date" name="date" id="date"
+                        /></label>
+                        <label for="time"
+                            >time <input type="time" name="time" id="time"
+                        /></label>
+                        <label for="datetime-local"
+                            >datetime-local
+                            <input
+                                type="datetime-local"
+                                name="datetime-local"
+                                id="datetime-local"
+                        /></label>
+                    </fieldset>
+                </form>
+                <section>
+                    <h3>
+                        section : 논리적으로 관련있는 콘텐츠 영역. 제목과 함께
+                        사용
+                    </h3>
+
+                    <form action="#">
+                        <fieldset>
+                            <legend>
+                                select : 콤보박스 option : 선택 항목 추가
+                                optgroup : 그룹으로 묶음
+                            </legend>
+                            <label for="select"
+                                >select
+                                <select
+                                    name="select"
+                                    id="select"
+                                    size="3"
+                                    multiple
+                                >
+                                    <optgroup label="group1">
+                                        <option value="1">
+                                            value : 서버로 전달할 값
+                                        </option>
+                                        <option value="2">
+                                            size : 화면에 노출되는 항목 개수
+                                        </option>
+                                    </optgroup>
+                                    <optgroup label="group2">
+                                        <option value="3">
+                                            multiple : 여러 항목 동시 선택
+                                        </option>
+                                        <option value="4" selected>
+                                            selected : 기본 선택 항목
+                                        </option>
+                                    </optgroup>
+                                </select>
+                            </label>
+                        </fieldset>
+                    </form>
+                    <div>
+                        <input type="file" name="file" id="file" />
+                        <input type="color" name="color" id="color" />
+                        <input type="image" src="image.jpg" alt="이미지" />
+                        <hr />
+                        <label for="button"
+                            >disabled
+                            <input type="button" value="버튼" disabled
+                        /></label>
+                        <input type="submit" value="전송" />
+                        <input type="reset" value="취소" />
+                    </div>
+                </section>
+            </main>
+            <article>
+                <h3>article : 독립적인 콘텐츠 영역.</h3>
+                <table>
+                    표 전체를 생성 table태그 안에서만 표 관련 태그 사용
+                    <caption>
+                        표 제목
+                    </caption>
+                    <tr>
+                        <th>tr</th>
+                        <td>행을 생성</td>
+                    </tr>
+                    <tr>
+                        <th>열 제목</th>
+                        <td>일반적인 데이터</td>
+                    </tr>
+                </table>
+            </article>
+            <aside>
+                <h3>aside : 주요 내용과 직접적으로 관계되지 않는 콘텐츠영역</h3>
+                <table>
+                    <caption>
+                        col : 열 그룹화 colgroup : 2개 이상 그룹화
+                    </caption>
+                    <col style="width: 200px" />
+                    <colgroup
+                        span="2"
+                        style="background-color: #f0f0f0"
+                    ></colgroup>
+                    <col style="width: 10px" />
+                    <thead>
+                        <tr>
+                            <th scope="col">thead : header 생성</th>
+                            <th>scope : th에서 th범위 지정</th>
+                            <th>수량</th>
+                            <th>가격</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>사과</td>
+                            <td>10</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>tbody : 본문 데이터</td>
+                            <td>20</td>
+                            <td>2000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">합계</td>
+                            <td>30</td>
+                            <td>footer : 바닥글</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </aside>
+            <footer id="footer">
+                <h4>footer : 저작권 연락처, 제작 정보 등 포함</h4>
+                <audio src="#" controls loop>
+                    <source src="#" type="audio/mp3" />
+                </audio>
+                controls : 재생, 중단, 음소거, 볼륨 조절 등의 컨트롤러 표시 loop
+                : 반복 재생 autoplay : 자동 재생 muted : 음소거 width, height :
+                가로, 세로 크기 지정 source : 미디어 파일의 경로와 타입 지정
+            </footer>
+        </div>
+    </body>
+</html>
